@@ -7,12 +7,19 @@
     text-shadow: 3px 3px black;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 30px;
+}
+
 body{
     background-color: #3c2f2f;
     color: #fff;
 }
   
 header{
+    position: sticky;
+    top: 0;
     background-color: black;
     padding: 1em;
     text-align: center;
@@ -28,7 +35,7 @@ header{
 
 nav ul{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     list-style: none;
     gap: 1em;
 }
