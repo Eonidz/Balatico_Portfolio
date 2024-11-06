@@ -23,6 +23,7 @@ header{
     background-color: black;
     padding: 1em;
     text-align: center;
+    z-index: 1000;
 }
 
 .name{
@@ -118,10 +119,18 @@ section{
 .hobby-card {
     background-color: #533939;
     padding: 5px;
-    width: 150px;
+    height: 300px;
+    width: 400px;
     border-radius: 5px;
 }
-  
+
+.hobby-picture {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
 .skill-container {
     display: flex;
     flex-direction: column;
@@ -170,7 +179,8 @@ section{
 
 .photo:hover {
     flex: 3;
-    transform: scale(2);  
+    transform: scale(2);
+    z-index: 10;  
 }
 
 .gallery-container:hover > :not(:hover) {
@@ -197,4 +207,37 @@ footer{
     color: #fff;
     text-decoration: none;
 }
+
+@media (max-width: 959px) {
+    .hobby-card {
+        background-color: #533939;
+        padding: 5px;
+        height: 300px;
+        width: px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hobbies {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
   
+    .hobby-card {
+      width: 100%;
+      max-width: 250px;
+      margin-bottom: 15px;
+    }
+  }
+
+@media (max-width: 500px) {
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        width: 100%;
+        height: auto;
+        padding: 10px;
+      }
+}
