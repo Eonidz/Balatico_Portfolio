@@ -179,7 +179,7 @@ section{
 
 .photo:hover {
     flex: 3;
-    transform: scale(2); 
+    transform: scale(1.5); 
 }
 
 .gallery-container:hover > :not(:hover) {
